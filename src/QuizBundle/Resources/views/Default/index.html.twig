@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block category %}
+    {#<h1>Categories list</h1>#}
+    <div class="row">
+        {% for category in categories %}
+            <div class="col-lg-4 col-sm-1">
+                <div class="container-category">
+                    <a href="">
+                        <img class="img-category img-thumbnail img-fluid" src="{{ category.img }}" alt="{{ category.img }}">
+                    </a>
+                    <p class="title-category">
+                        <a href="{{ path('category_list', { 'id': category.id }) }}" class="title-category-{{ category.id }}">
+                            Quiz {{ category.nom }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

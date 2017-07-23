@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@QuizBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -64,3 +65,44 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+        less:
+            node: C:\Program Files\nodejs\node
+            node_paths: C:\Program Files\nodejs\node C:\Program Files\nodejs\node_modules
+        jsqueeze: ~
+        scssphp:
+            formatter: 'Leafo\ScssPhp\Formatter\Compressed'
+    assets:
+        jquery:
+            inputs:
+                - %kernel.root_dir%/../web/js/jquery.min.js
+        bootstrap_js:
+            inputs:
+                - %kernel.root_dir%/../web/js/utils.js
+                - %kernel.root_dir%/../web/js/tether.js
+                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.min.js
+        bootstrap_css:
+            inputs:
+                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css
+            filters: [ cssrewrite ]
+#        bootstrap_glyphicons_ttf:
+#            inputs:
+#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf
+#            output: "fonts/glyphicons-halflings-regular.ttf"
+#        bootstrap_glyphicons_eot:
+#            inputs:
+#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.eot
+#            output: "fonts/glyphicons-halflings-regular.eot"
+#        bootstrap_glyphicons_svg:
+#            inputs:
+#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.svg
+#            output: "fonts/glyphicons-halflings-regular.svg"
+#        bootstrap_glyphicons_woff:
+#            inputs:
+#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
+#            output: "fonts/glyphicons-halflings-regular.woff"
