@@ -30,6 +30,12 @@ framework:
         handler_id: ~
     fragments: ~
     http_method_override: true
+    assets:
+        packages:
+            category:
+                base_path: /img/
+            theme:
+                base_path: /img/Affiche_theme/
 
 # Twig Configuration
 twig:
@@ -90,19 +96,10 @@ assetic:
             inputs:
                 - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css
             filters: [ cssrewrite ]
-#        bootstrap_glyphicons_ttf:
-#            inputs:
-#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf
-#            output: "fonts/glyphicons-halflings-regular.ttf"
-#        bootstrap_glyphicons_eot:
-#            inputs:
-#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.eot
-#            output: "fonts/glyphicons-halflings-regular.eot"
-#        bootstrap_glyphicons_svg:
-#            inputs:
-#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.svg
-#            output: "fonts/glyphicons-halflings-regular.svg"
-#        bootstrap_glyphicons_woff:
-#            inputs:
-#                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
-#            output: "fonts/glyphicons-halflings-regular.woff"
+
+
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations

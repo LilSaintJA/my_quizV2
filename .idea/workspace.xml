@@ -2,58 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a19068-8c7c-479f-953b-58e711c68c26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/CategoryRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/HomeControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/CategoryController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/HomeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Entity/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/QuizBundle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Repository/ThemesRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/config/services.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/delete.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Home/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/CategoryControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/HomeControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/QuizBundle/Controller/DefaultControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_css.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_css_bootstrap.min_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js_bootstrap.min_2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js_bootstrap.min_3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js_tether_2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js_utils_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assetic/jquery_jquery.min_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/app_mdb.min_2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/main_app_3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/main_app_4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/main_mdb_2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/compiled/main_part_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/less/app.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/less/color-title.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/compiled/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/compiled/app_mdb_3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/DoctrineMigrations/Version20170723125305.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/ThemesController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Entity/Categories.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Entity/Questions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Repository/CategoriesRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Repository/QuestionsRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Themes/add.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Themes/delete.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Themes/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Themes/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Themes/list.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/ThemesControllerTest.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/CategoryRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/HomeControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/QuizBundle/Entity/Category.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/CategoriesController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/add.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/add.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/delete.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/delete.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/edit.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/edit.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/index.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/index.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/list.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/CategoryControllerTest.php" afterPath="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/CategoryControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assetic/bootstrap_css.css" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assetic/bootstrap_css_bootstrap.min_1.css" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_css_bootstrap.min_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assetic/bootstrap_js.js" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assetic/bootstrap_js_bootstrap.min_3.js" afterPath="$PROJECT_DIR$/web/assetic/bootstrap_js_bootstrap.min_3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/app.css" afterPath="$PROJECT_DIR$/web/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/main.css" afterPath="$PROJECT_DIR$/web/css/compiled/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/main_app_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/main_app_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/main_part_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/main_part_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app.js" afterPath="$PROJECT_DIR$/web/js/compiled/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_2.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,50 +58,51 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="25" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="e#122#412#0#Twig" expanded="false" />
-                <element signature="e#707#918#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="76" />
+            <state relative-caret-position="345">
+              <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
               <folding>
-                <element signature="e#41#98#0#PHP" expanded="false" />
+                <element signature="e#41#98#0#PHP" expanded="true" />
+                <element signature="e#209#239#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/CategoryController.php">
+      <file leaf-file-name="CategoriesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/CategoriesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="690">
+              <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
-                <element signature="e#41#72#0#PHP" expanded="true" />
-                <element signature="e#303#365#0#PHP" expanded="true" />
-                <element signature="e#523#612#0#PHP" expanded="true" />
+                <element signature="e#274#336#0#PHP" expanded="true" />
+                <element signature="e#496#585#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/list.html.twig">
+      <file leaf-file-name="ThemesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/ThemesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="644">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#41#101#0#PHP" expanded="true" />
+                <element signature="e#269#305#0#PHP" expanded="true" />
+                <element signature="e#461#545#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -117,18 +111,63 @@
       <file leaf-file-name="Themes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="805">
+              <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+              <folding>
+                <element signature="e#37#69#0#PHP" expanded="true" />
+                <element signature="e#222#409#0#PHP" expanded="true" />
+                <element signature="e#430#608#0#PHP" expanded="true" />
+                <element signature="e#799#894#0#PHP" expanded="true" />
+                <element signature="e#1016#1100#0#PHP" expanded="true" />
+                <element signature="e#1130#1186#0#PHP" expanded="true" />
+                <element signature="e#1258#1339#0#PHP" expanded="true" />
+                <element signature="e#1440#1496#0#PHP" expanded="true" />
+                <element signature="e#1570#1657#0#PHP" expanded="true" />
+                <element signature="e#1767#1827#0#PHP" expanded="true" />
+                <element signature="e#1906#2020#0#PHP" expanded="true" />
+                <element signature="e#2178#2262#0#PHP" expanded="true" />
+                <element signature="e#2346#2427#0#PHP" expanded="true" />
+                <element signature="e#2528#2584#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/app.css">
+      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="276">
+              <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -152,31 +191,31 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php app/console generate:controller" />
-      <command text="php app/console assets:install" />
-      <command text="composer require symfony/assetic-bundle" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:schema:validate" />
-      <command text="php app/console doctrine:generate:entities" />
-      <command text="php app/console doctrine:generate:entities Category" />
-      <command text="php app/console doctrine:schema:validate" />
-      <command text="php app/console doctrine:schema:update" />
-      <command text="php app/console doctrine:schema:update --force" />
-      <command text="php app/console doctrine:schema:validate" />
-      <command text="php app/console doctrine:generate:entities QuizBundle:Category" />
-      <command text="php app/console cache:clear" />
-      <command text="composer require twbs/bootstrap:4.0.0-alpha.6" />
-      <command text=" php app/console assetic:dump" />
-      <command text="php app/console assets:install web" />
-      <command text=" php app/console assetic:dump" />
-      <command text=" php app/console assetic:dump --force" />
-      <command text=" php app/console assetic:dump" />
-      <command text="php app/console generate:controller" />
-      <command text=" php app/console assetic:dump" />
-      <command text="php app/console cache:clear" />
-      <command text=" php app/console assetic:dump" />
+      <command text="php app/console doctrine:schema:create" />
+      <command text="php app/console doctrine:database:drop --force" />
+      <command text="php app/console doctrine:database:create" />
+      <command text="php app/console doctrine:schema:create" />
       <command text="php app/console doctrine:generate:entity" />
+      <command text="php app/console doctrine:schema:create" />
       <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console doctrine:database:drop --force" />
+      <command text="php app/console doctrine:database:create" />
+      <command text="php app/console doctrine:schema:create" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console doctrine:database:drop --force" />
+      <command text="php app/console doctrine:database:create" />
+      <command text="php app/console doctrine:schema:create" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console cache:clear" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console doctrine:generate:entities QuizBundle" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console doctrine:generate:entities QuizBundle" />
+      <command text="php app/console doctrine:schema:update --force" />
+      <command text="php app/console doctrine:generate:controller" />
+      <command text="php app/console generate:controller" />
+      <command text="php app/console assetic:dump" />
+      <command text="php app/console doctrine:generate:entity" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -195,22 +234,34 @@
       <list>
         <option value="$PROJECT_DIR$/src/AppBundle/Tests/Controller/HomeControllerTest.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/QuizBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/web/js/compiled/app_part_2.js" />
         <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Home/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/web/css/less/app.less" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/web/css/less/color-title.less" />
-        <option value="$PROJECT_DIR$/web/css/app.css" />
-        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/QuizBundle/Controller/CategoryController.php" />
         <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Entity/Category.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Repository/CategoriesRepository.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/delete.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/index.html.twig" />
+        <option value="$USER_HOME$/Desktop/Sujet Wac/my_quiz.sql" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Tests/Controller/CategoryControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Entity/Categories.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Controller/CategoriesController.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Controller/ThemesController.php" />
+        <option value="$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/list.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/app.css" />
       </list>
     </option>
   </component>
@@ -270,38 +321,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP_Avance_my_quiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP_Avance_my_quiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP_Avance_my_quiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP_Avance_my_quiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -347,10 +366,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,7 +425,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Category" />
+              <option name="myItemId" value="Categories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,6 +448,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP_Avance_my_quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP_Avance_my_quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuizBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -954,46 +995,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500658133446</updated>
-      <workItem from="1500658135719" duration="37453000" />
+      <workItem from="1500658135719" duration="58916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37453000" />
+    <option name="totallyTimeSpent" value="58916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2178" height="1408" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="FTP" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939324" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36249015" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1044,33 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#86#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding>
-            <marker date="1500729352281" expanded="true" signature="524:1042" ph="{&quot;php&quot;: &quot;&gt;=5.3.9&quot;...}" />
-            <marker date="1500729352281" expanded="true" signature="1063:1189" ph="{&quot;phpunit/phpunit&quot;: &quot;^4.8&quot;...}" />
-            <marker date="1500729352281" expanded="true" signature="1206:1937" ph="{...}" />
-            <marker date="1500729352281" expanded="true" signature="1235:1788" ph="[...]" />
-            <marker date="1500729352281" expanded="true" signature="1818:1860" ph="[...]" />
-            <marker date="1500729352281" expanded="true" signature="1953:2076" ph="{&quot;bin-dir&quot;: &quot;bin&quot;...}" />
-            <marker date="1500729352281" expanded="true" signature="2001:2039" ph="{&quot;php&quot;: &quot;5.3.9&quot;...}" />
-            <marker date="1500729352281" expanded="true" signature="2239:2298" ph="{&quot;file&quot;: &quot;app/config/parameters.yml&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1139,19 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding>
-            <element signature="e#382#477#0#PHP" expanded="false" />
-            <element signature="e#501#582#0#PHP" expanded="false" />
-            <element signature="e#1049#1132#0#PHP" expanded="false" />
-            <element signature="e#1233#1289#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1164,14 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="75" column="89" lean-forward="false" selection-start-line="75" selection-start-column="89" selection-end-line="75" selection-end-column="89" />
           <folding />
         </state>
       </provider>
@@ -1200,14 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1219,60 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="76" />
-          <folding>
-            <element signature="e#41#98#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#72#0#PHP" expanded="true" />
-            <element signature="e#303#365#0#PHP" expanded="true" />
-            <element signature="e#523#612#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Category/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/Sujet Wac/BDD-QUIZ.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1281,11 +1212,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <marker date="1500813913998" expanded="true" signature="524:1136" ph="{&quot;php&quot;: &quot;&gt;=5.3.9&quot;...}" />
+            <marker date="1500813913998" expanded="true" signature="1157:1283" ph="{&quot;phpunit/phpunit&quot;: &quot;^4.8&quot;...}" />
+            <marker date="1500813913998" expanded="true" signature="1300:2031" ph="{...}" />
+            <marker date="1500813913998" expanded="true" signature="1329:1882" ph="[...]" />
+            <marker date="1500813913998" expanded="true" signature="1912:1954" ph="[...]" />
+            <marker date="1500813913998" expanded="true" signature="2047:2110" ph="{&quot;bin-dir&quot;: &quot;bin&quot;...}" />
+            <marker date="1500813913998" expanded="true" signature="2273:2332" ph="{&quot;file&quot;: &quot;app/config/parameters.yml&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/CategoriesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Sujet Wac/my_quiz.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="46" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Repository/DefaultRepositoryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/QuizBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Tests/Controller/CategoryControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/delete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#98#0#PHP" expanded="false" />
+            <element signature="e#206#236#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding>
+            <element signature="e#41#98#0#PHP" expanded="true" />
+            <element signature="e#209#239#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Repository/ThemesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Repository/CategoriesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <element signature="e#77#209#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/Categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding>
+            <element signature="e#71#205#0#PHP" expanded="false" />
+            <element signature="e#640#721#0#PHP" expanded="false" />
+            <element signature="e#1662#1770#0#PHP" expanded="false" />
+            <element signature="e#1907#1992#0#PHP" expanded="false" />
+            <element signature="e#2121#2212#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/CategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="e#274#336#0#PHP" expanded="true" />
+            <element signature="e#496#585#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Resources/views/Categories/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Controller/ThemesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#101#0#PHP" expanded="true" />
+            <element signature="e#269#305#0#PHP" expanded="true" />
+            <element signature="e#461#545#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/QuizBundle/Entity/Themes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="true" />
+            <element signature="e#222#409#0#PHP" expanded="true" />
+            <element signature="e#430#608#0#PHP" expanded="true" />
+            <element signature="e#799#894#0#PHP" expanded="true" />
+            <element signature="e#1016#1100#0#PHP" expanded="true" />
+            <element signature="e#1130#1186#0#PHP" expanded="true" />
+            <element signature="e#1258#1339#0#PHP" expanded="true" />
+            <element signature="e#1440#1496#0#PHP" expanded="true" />
+            <element signature="e#1570#1657#0#PHP" expanded="true" />
+            <element signature="e#1767#1827#0#PHP" expanded="true" />
+            <element signature="e#1906#2020#0#PHP" expanded="true" />
+            <element signature="e#2178#2262#0#PHP" expanded="true" />
+            <element signature="e#2346#2427#0#PHP" expanded="true" />
+            <element signature="e#2528#2584#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -134,27 +134,4 @@ class Themes
     {
         return $this->category;
     }
-
-    /**
-     * Set img
-     *
-     * @param string $img
-     * @return Themes
-     */
-    public function setImg($img)
-    {
-        $this->img = $img;
-
-        return $this;
-    }
-
-    /**
-     * Get img
-     *
-     * @return string 
-     */
-    public function getImg()
-    {
-        return $this->img;
-    }
 }

@@ -5,13 +5,20 @@ namespace QuizBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Category
+ * Categories
  *
- * @ORM\Table(name="category")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\CategoryRepository")
+ * @ORM\Table(name="categories")
+ * @ORM\Entity(repositoryClass="QuizBundle\Repository\CategoriesRepository")
  */
-class Category
+class Categories
 {
+
+    /**
+     * @var Themes $theme
+     * @ORM\OneToMany(targetEntity="Themes", mappedBy="category")
+     */
+    private $theme;
+
     /**
      * @var int
      *
@@ -50,7 +57,7 @@ class Category
      * Set nom
      *
      * @param string $nom
-     * @return Category
+     * @return Categories
      */
     public function setNom($nom)
     {
@@ -73,7 +80,7 @@ class Category
      * Set img
      *
      * @param string $img
-     * @return Category
+     * @return Categories
      */
     public function setImg($img)
     {
@@ -90,5 +97,45 @@ class Category
     public function getImg()
     {
         return $this->img;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->theme = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add theme
+     *
+     * @param \QuizBundle\Entity\Themes $theme
+     * @return Categories
+     */
+    public function addTheme(\QuizBundle\Entity\Themes $theme)
+    {
+        $this->theme[] = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Remove theme
+     *
+     * @param \QuizBundle\Entity\Themes $theme
+     */
+    public function removeTheme(\QuizBundle\Entity\Themes $theme)
+    {
+        $this->theme->removeElement($theme);
+    }
+
+    /**
+     * Get theme
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTheme()
+    {
+        return $this->theme;
     }
 }
