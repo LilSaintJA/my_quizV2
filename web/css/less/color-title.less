@@ -1,0 +1,8 @@
+@iterations: 10;
+.title-category (@i) when (@i > 0) {
+  .title-category-@{i} {
+    width: ~"@{i}%";
+  }
+  .title-category(@i - 1);
+}
+.title-category (@iterations);
