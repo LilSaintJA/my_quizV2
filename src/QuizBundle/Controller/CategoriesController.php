@@ -2,19 +2,19 @@
 
 namespace QuizBundle\Controller;
 
-use QuizBundle\Entity\Category;
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class CategoryController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * @Route("/category/", name="category_index")
      */
     public function indexAction()
     {
-        return $this->render('QuizBundle:Category:index.html.twig', array(
+        return $this->render('QuizBundle:Categories:index.html.twig', array(
             // ...
         ));
     }
@@ -25,11 +25,14 @@ class CategoryController extends Controller
      */
     public function listAction($id) {
         $category = $this->getDoctrine()
-            ->getRepository('QuizBundle:Category')
+            ->getRepository('QuizBundle:Categories')
             ->find($id);
 
-        return $this->render('QuizBundle:Category:list.html.twig', array(
-            'category' => $category
+        $theme = $category->getTheme();
+
+        return $this->render('QuizBundle:Categories:list.html.twig', array(
+            'category' => $category,
+            'theme' => $theme
         ));
     }
 
@@ -38,7 +41,7 @@ class CategoryController extends Controller
      */
     public function addAction()
     {
-        return $this->render('QuizBundle:Category:add.html.twig', array(
+        return $this->render('QuizBundle:Categories:add.html.twig', array(
             // ...
         ));
     }
@@ -48,7 +51,7 @@ class CategoryController extends Controller
      */
     public function deleteAction()
     {
-        return $this->render('QuizBundle:Category:delete.html.twig', array(
+        return $this->render('QuizBundle:Categories:delete.html.twig', array(
             // ...
         ));
     }
@@ -58,7 +61,7 @@ class CategoryController extends Controller
      */
     public function editAction()
     {
-        return $this->render('QuizBundle:Category:edit.html.twig', array(
+        return $this->render('QuizBundle:Categories:edit.html.twig', array(
             // ...
         ));
     }

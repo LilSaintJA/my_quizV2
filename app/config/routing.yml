@@ -5,8 +5,4 @@ quiz:
 
 list_cat:
     path: /category/{id}
-    defaults: { _controller: QuizBundle:Category:list }
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+    defaults: { _controller: QuizBundle:Categories:list }

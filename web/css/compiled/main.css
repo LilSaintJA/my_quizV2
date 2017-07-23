@@ -8824,11 +8824,11 @@ a.waves-effect .waves-ripple {
 
 /* Settings Base */
 
-.title-category {
+.title-category, .title-themes {
     text-align: center;
     font-weight: bold;
 }
-/* Settings Title Category from HomePage */
+/* Settings Title Categories from HomePage */
 .title-category-1 {
     color: #880e4f;
 }

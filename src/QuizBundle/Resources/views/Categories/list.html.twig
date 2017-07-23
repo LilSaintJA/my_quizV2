@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block list_category %}
+    <div class="container">
+        <div class="row">
+            <h1>Tous les quizz pour {{ category.nom }}</h1>
+        </div>
+        <div class="row">
+            {% for themes in theme %}
+                <div class="col-lg-4 col-sm-1">
+                    <div class="container-themes">
+                        <a href="{{ path('theme_list', { 'id': themes.id }) }}">
+                            <img class="img-themes img-thumbnail img-fluid" src="{{asset(themes.img, 'theme') }}" alt="{{ themes.img }}">
+                        </a>
+                        <p class="title-themes">
+                            <a href="{{ path('theme_list', { 'id': themes.id }) }}" class="title-themes-{{ themes.id }}">
+                                Quiz {{ themes.nom }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
