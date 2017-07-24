@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{{ quiz.nom }}{% endblock %}
+
+{% block body %}
+    <header class="header header-questions quiz_{{ quiz.id }}"></header>
+    <div class="container">
+        <h1>{{ quiz.nom }}</h1>
+        <form action="">
+            {% for q in ask %}
+                <p>{{ q.questions }}</p>
+            {% endfor %}
+        </form>
+    </div>
+
+{% endblock %}

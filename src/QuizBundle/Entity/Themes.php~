@@ -26,6 +26,12 @@ class Themes
     private $category;
 
     /**
+     * @var Questions $question
+     * @ORM\OneToMany(targetEntity="Questions", mappedBy="theme")
+     */
+    private $question;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -133,5 +139,28 @@ class Themes
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set img
+     *
+     * @param string $img
+     * @return Themes
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+
+        return $this;
+    }
+
+    /**
+     * Get img
+     *
+     * @return string 
+     */
+    public function getImg()
+    {
+        return $this->img;
     }
 }

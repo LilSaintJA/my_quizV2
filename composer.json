@@ -15,6 +15,7 @@
     },
     "require": {
         "php": ">=5.3.9",
+        "abdielcs/expanded-collection-bundle": "^0.1.0",
         "doctrine/doctrine-bundle": "~1.4",
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "doctrine/migrations": "^1.5",

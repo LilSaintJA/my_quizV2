@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6dceb64848cc920ff5c3d2f67f39b9b",
+    "content-hash": "de2c85322622c3776ba4900468c9f629",
     "packages": [
+        {
+            "name": "abdielcs/expanded-collection-bundle",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/abdielcs/ExpandedCollectionBundle.git",
+                "reference": "7b46369febe0e20fd1ddf5d3b93e352217d02639"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/abdielcs/ExpandedCollectionBundle/zipball/7b46369febe0e20fd1ddf5d3b93e352217d02639",
+                "reference": "7b46369febe0e20fd1ddf5d3b93e352217d02639",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "~2.3|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "abdielcs\\ExpandedCollectionBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdiel Carrazana",
+                    "email": "abdielcs@gmail.com"
+                }
+            ],
+            "description": "Symfony 2 and 3 bundle for rendering a collection of entities as an expanded selectable list",
+            "keywords": [
+                "Symfony2",
+                "checkbox",
+                "collection",
+                "expanded",
+                "form",
+                "list",
+                "multiple",
+                "symfony3"
+            ],
+            "time": "2016-04-19T13:03:59+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",

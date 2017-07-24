@@ -9,11 +9,11 @@
             {% for themes in theme %}
                 <div class="col-lg-4 col-sm-1">
                     <div class="container-themes">
-                        <a href="{{ path('theme_list', { 'id': themes.id }) }}">
+                        <a href="{{ path('quiz', { 'id': themes.id }) }}">
                             <img class="img-themes img-thumbnail img-fluid" src="{{asset(themes.img, 'theme') }}" alt="{{ themes.img }}">
                         </a>
                         <p class="title-themes">
-                            <a href="{{ path('theme_list', { 'id': themes.id }) }}" class="title-themes-{{ themes.id }}">
+                            <a href="{{ path('quiz', { 'id': themes.id }) }}" class="title-themes-{{ themes.id }}">
                                 Quiz {{ themes.nom }}
                             </a>
                         </p>

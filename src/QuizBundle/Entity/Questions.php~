@@ -98,32 +98,4 @@ class Questions
     {
         return $this->idTheme;
     }
-
-    /**
-     * Set theme
-     *
-     * @param \QuizBundle\Entity\Themes $theme
-     * @return Questions
-     */
-    public function setTheme(\QuizBundle\Entity\Themes $theme = null)
-    {
-        $this->theme = $theme;
-
-        return $this;
-    }
-
-    /**
-     * Get theme
-     *
-     * @return \QuizBundle\Entity\Themes 
-     */
-    public function getTheme()
-    {
-        return $this->theme;
-    }
-//
-//    public function __toString()
-//    {
-//        return $this->theme->getNom();
-//    }
 }

@@ -26,6 +26,12 @@ class Themes
     private $category;
 
     /**
+     * @var Questions $question
+     * @ORM\OneToMany(targetEntity="Questions", mappedBy="theme")
+     */
+    private $question;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -157,4 +163,49 @@ class Themes
     {
         return $this->img;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->question = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add question
+     *
+     * @param \QuizBundle\Entity\Questions $question
+     * @return Themes
+     */
+    public function addQuestion(\QuizBundle\Entity\Questions $question)
+    {
+        $this->question[] = $question;
+
+        return $this;
+    }
+
+    /**
+     * Remove question
+     *
+     * @param \QuizBundle\Entity\Questions $question
+     */
+    public function removeQuestion(\QuizBundle\Entity\Questions $question)
+    {
+        $this->question->removeElement($question);
+    }
+
+    /**
+     * Get question
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+
+//    public function __toString()
+//    {
+//        return $this->question;
+//    }
 }
