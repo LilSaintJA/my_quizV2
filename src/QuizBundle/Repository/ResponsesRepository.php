@@ -12,4 +12,27 @@ use Doctrine\ORM\EntityRepository;
  */
 class ResponsesRepository extends EntityRepository
 {
+
+    public function findById($id) {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT r.status FROM QuizBundle:Responses r 
+                      WHERE r.id = :id'
+            )
+            ->setParameter('id', $id)
+            ->getResult();
+    }
+
+    public function getAllByIdQuestions($id)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT r FROM QuizBundle:Responses r
+                      INNER JOIN QuizBundle:Questions q WITH r.idQuestion = q.id 
+                      INNER JOIN QuizBundle:Themes t WITH q.idTheme = t.id 
+                      WHERE t.id = :id'
+            )
+            ->setParameter('id', $id)
+            ->getResult();
+    }
 }
