@@ -13,7 +13,7 @@ class QuestionsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('questions')->add('idTheme')->add('theme');
+        $builder->add('questions');
     }
     
     /**

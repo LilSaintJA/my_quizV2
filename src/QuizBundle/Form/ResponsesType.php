@@ -13,7 +13,8 @@ class ResponsesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('idQuestion')->add('status')->add('question');
+//        $builder->add('nom')->add('idQuestion')->add('status')->add('question');
+        $builder->add('nom', 'radio');
     }
     
     /**
