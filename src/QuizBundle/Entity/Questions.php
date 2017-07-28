@@ -20,6 +20,12 @@ class Questions
     private $theme;
 
     /**
+     * @var Responses $reponse
+     * @ORM\OneToMany(targetEntity="Responses", mappedBy="question")
+     */
+    private $reponse;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -121,9 +127,45 @@ class Questions
     {
         return $this->theme;
     }
-//
-//    public function __toString()
-//    {
-//        return $this->theme->getNom();
-//    }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reponse = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add reponse
+     *
+     * @param \QuizBundle\Entity\Responses $reponse
+     * @return Questions
+     */
+    public function addReponse(\QuizBundle\Entity\Responses $reponse)
+    {
+        $this->reponse[] = $reponse;
+
+        return $this;
+    }
+
+    /**
+     * Remove reponse
+     *
+     * @param \QuizBundle\Entity\Responses $reponse
+     */
+    public function removeReponse(\QuizBundle\Entity\Responses $reponse)
+    {
+        $this->reponse->removeElement($reponse);
+    }
+
+    /**
+     * Get reponse
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getReponse()
+    {
+        return $this->reponse;
+    }
 }

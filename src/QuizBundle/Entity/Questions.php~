@@ -20,6 +20,12 @@ class Questions
     private $theme;
 
     /**
+     * @var Responses $reponse
+     * @ORM\OneToMany(targetEntity="Responses", mappedBy="question")
+     */
+    private $reponse;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -97,5 +103,28 @@ class Questions
     public function getIdTheme()
     {
         return $this->idTheme;
+    }
+
+    /**
+     * Set theme
+     *
+     * @param \QuizBundle\Entity\Themes $theme
+     * @return Questions
+     */
+    public function setTheme(\QuizBundle\Entity\Themes $theme = null)
+    {
+        $this->theme = $theme;
+
+        return $this;
+    }
+
+    /**
+     * Get theme
+     *
+     * @return \QuizBundle\Entity\Themes 
+     */
+    public function getTheme()
+    {
+        return $this->theme;
     }
 }

@@ -206,6 +206,6 @@ class Themes
 
 //    public function __toString()
 //    {
-//        return $this->question;
+//        return $this->get;
 //    }
 }
