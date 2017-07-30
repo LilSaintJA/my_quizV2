@@ -26,7 +26,6 @@ class Themes
     private $category;
 
     /**
-     * @var Questions $question
      * @ORM\OneToMany(targetEntity="Questions", mappedBy="theme")
      */
     private $question;

@@ -3,6 +3,7 @@
 namespace QuizBundle\Controller;
 
 use QuizBundle\Entity\Responses;
+use QuizBundle\Entity\Themes;
 use QuizBundle\Form\ResponsesType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -17,65 +18,65 @@ class QuizzController extends Controller
      */
     public function indexAction(Request $request, $id)
     {
-        $quiz = $this->getDoctrine()
-            ->getRepository('QuizBundle:Themes')
-            ->find($id);
 
-        $reponse = $this->getDoctrine()
-            ->getRepository('QuizBundle:Responses')
-            ->getAllByIdQuestions($id);
+        $quiz = $this->getDoctrine()
+            ->getRepository(Themes::class)
+            ->find($id);
 
         $ask = $quiz->getQuestion();
 
         $reponses = new Responses();
-        $form = $this->createForm(new ResponsesType(), $reponses);
+        $form = $this->createForm(ResponsesType::class, $reponses);
 
         if ($request->isMethod('POST')) {
-
             $form->handleRequest($request);
 
-//            $test = $form->getData();
-
-            // Récupérer le status par un input hidden
-            // Vérifier que le input hidden est égale à 1 = good_answer, sinon = bad_answer
-            $test = $request->request->all();
-
-//            var_dump($test);
-
-            foreach ($test as $tests => $id) {
-                $q = $this->getDoctrine()
-                    ->getRepository('QuizBundle:Responses')
-                    ->findById($id);
-
-                foreach ($q as $status => $value) {
-//                    $tab = count($value);
-//                    echo $tab;
-                    foreach ($value as $stat) {
-//                        var_dump($value);
-                        if ($stat === 1) {
-                            var_dump($value);
-                            echo 'Bonne réponse' . "<br />";
-                        } else {
-                            var_dump($value) . "\n";
-                            echo 'Mauvaise réponse' . "<br />";
-                        }
-                    }
-                }
+            if ($form->isSubmitted() && $form->isValid()) {
+                return $this->redirectToRoute('quiz_correction');
             }
-
-//                return $this->redirectToRoute('quizz_index', array('id' => $reponse->getId()));
         }
 
         return $this->render('QuizBundle:Quizz:index.html.twig', array(
             'quiz' => $quiz,
             'form' => $form->createView(),
+            'ask' => $ask
+        ));
+    }
+
+
+    /**
+     * @Route("/quiz/{id}", name="quiz_correction")
+     * @Method({"GET", "POST"})
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function correctionAction(Request $request, $id) {
+
+//        $repository = $this->getDoctrine()
+//            ->getRepository(Themes::class);
+//
+//        $answer = $repository->findBy(
+//            array('id' => $id),
+//            array('nom' => 'ASC')
+//        );
+
+        $quiz = $this->getDoctrine()
+            ->getRepository(Themes::class)
+            ->find($id);
+
+
+        $ask = $quiz->getQuestion();
+
+        $reponseUser = $request->request->all();
+
+        return $this->render('QuizBundle:Quizz:correction.html.twig', array(
+            'quiz' => $quiz,
             'ask' => $ask,
-            'reponse' => $reponse
+            'reponseUser' => $reponseUser
         ));
     }
 
     /**
-     * @Route("/list")
+     * @Route("/list", name="quizz_list")
      */
     public function listAction()
     {
@@ -114,23 +115,5 @@ class QuizzController extends Controller
         ));
     }
 
-    /**
-     * @Route("/quizz", name="quiz_correction")
-     * @Method({"POST"})
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function correctionAction(Request $request) {
-
-        $em = $this->getDoctrine()
-            ->getManager();
-
-        $reponses = new Responses();
-        $form = $this->createForm(new ResponsesType(), $reponses);
-
-
-        return $this->render('QuizBundle:Quizz:correction.html.twig', array(
-            'form' => $form->createView()
-        ));
-    }
 
 }

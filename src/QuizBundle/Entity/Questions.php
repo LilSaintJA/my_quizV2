@@ -13,8 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Questions
 {
     /**
-     * @var Themes $theme
-     * @ORM\ManyToOne(targetEntity="Themes", inversedBy="questions")
+     * @ORM\ManyToOne(targetEntity="Themes", inversedBy="question")
      * @ORM\JoinColumn(name="id_theme", referencedColumnName="id")
      */
     private $theme;

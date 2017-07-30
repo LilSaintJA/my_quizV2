@@ -27,10 +27,15 @@
 .title-category-10 { color: #a1887f; }
 
 /* Settings Quizz */
+
 .header-questions {
     width: 100%;
+    /*min-height: 60px;*/
+    /*max-height: 300px;*/
     height: 300px;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
@@ -176,3 +181,41 @@ input[type=radio]:checked ~ .label { color: #a1887f; }
 }
 
 .quiz-7 { background-image: url("../img/Affiche_theme/header_simpsons_1.png"); }
+
+
+/* Settings user Reponse */
+
+.container-reponse {
+    display: flex;
+    align-items: center;
+}
+
+.user-reponse {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.good-answer {
+    color: #4E763F;
+}
+
+.bad-answer {
+    color: #801515;
+}
+
+.container-reponse-img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 1rem;
+}
+
+.good-reponse {
+    background: url("../img/ok.png") no-repeat;
+    background-size: contain;
+}
+
+.bad-reponse {
+    background: url("../img/nok.png") no-repeat;
+    background-size: contain;
+
+}
