@@ -1,0 +1,43 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{{ quiz.nom }}{% endblock %}
+
+{% block body %}
+    <header class="header header-questions quiz-{{ quiz.id }} z-depth-1"></header>
+    <div class="container">
+        <h1 class="title-category-{{ quiz.id }} title-quizz">{{ quiz.nom }}</h1>
+        <div class="row">
+            {% if reponseUser %}
+                <div class="col l4">
+                    <p>Bravo vous avez compléte le quiz : <strong class="title-category-{{ quiz.id }}">{{ quiz.nom }}</strong></p>
+                    {#{% for test in answer %}#}
+                    {#<p>{{ test }}</p>#}
+                    {#{% endfor %}#}
+                </div>
+            {% endif %}
+        </div>
+        {% set i = 0 %}
+        {% for q in ask %}
+            {% set i = i + 1 %}
+            <div class="row row-quiz">
+                <p>{{ i }} - {{ q.questions }}</p>
+            </div>
+            {% for reponse in q.reponse %}
+                <p class="other-reponse">{{ reponse.nom }} {{ reponse.status }}</p>
+                {% for r in reponseUser %}
+                    <div class="container-reponse">
+                        {% if r == reponse.id %}
+                            {% if reponse.status == 0 %}
+                                <p class="user-reponse bad-answer">{{ reponse.nom }}</p>
+                                <div class="container-reponse-img bad-reponse"></div>
+                            {% else %}
+                                <p class="user-reponse good-answer">{{ reponse.nom }}</p>
+                                <div class="container-reponse-img good-reponse"></div>
+                            {% endif %} {# End if reponse.status #}
+                        {% endif %} {# End if reponse.id #}
+                    </div>
+                {% endfor %} {# End loop reponseUser #}
+            {% endfor %} {# End loop q.reponse #}
+        {% endfor %} {# End loop ask #}
+    </div>
+{% endblock %}

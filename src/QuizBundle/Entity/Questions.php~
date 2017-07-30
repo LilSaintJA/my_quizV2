@@ -13,7 +13,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Questions
 {
     /**
-     * @ORM\ManyToOne(targetEntity="Themes", inversedBy="question")
+     * @var Themes $theme
+     * @ORM\ManyToOne(targetEntity="Themes", inversedBy="questions")
      * @ORM\JoinColumn(name="id_theme", referencedColumnName="id")
      */
     private $theme;
@@ -125,46 +126,5 @@ class Questions
     public function getTheme()
     {
         return $this->theme;
-    }
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->reponse = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add reponse
-     *
-     * @param \QuizBundle\Entity\Responses $reponse
-     * @return Questions
-     */
-    public function addReponse(\QuizBundle\Entity\Responses $reponse)
-    {
-        $this->reponse[] = $reponse;
-
-        return $this;
-    }
-
-    /**
-     * Remove reponse
-     *
-     * @param \QuizBundle\Entity\Responses $reponse
-     */
-    public function removeReponse(\QuizBundle\Entity\Responses $reponse)
-    {
-        $this->reponse->removeElement($reponse);
-    }
-
-    /**
-     * Get reponse
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getReponse()
-    {
-        return $this->reponse;
     }
 }
