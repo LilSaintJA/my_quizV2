@@ -1,0 +1,121 @@
+easy_admin:
+    site_name: 'Quizzie'
+
+# -- Setings BackEnd's Design
+    design:
+        brand_color: '#1ABC9C'
+        form_theme: 'vertical'
+
+        menu:
+            - { label: 'Voir le site', route: 'quiz_default_index', icon: 'home', target: '_blank' }
+
+            - { label: 'Back Office' }
+            - label: 'Quizz'
+              children:
+                      [{ entity: Categories, label: 'Categories des Quizz', icon: 'circle-thin' },{ entity: Themes, label: 'Themes - Les Quizz', icon: 'circle-thin' },{ entity: Questions, label: 'Questions', icon: 'circle-thin' },{ entity: Reponses, label: 'Reponses', icon: 'circle-thin' }]
+
+            - label: 'Users'
+
+# -- Setings for list Actions
+    list:
+        actions:
+            - { name: 'new', label: 'New %%entity_label%%' }
+            - { name: 'search', label: 'Search' }
+            - { name: 'edit', label: 'Edit', icon: 'pencil' }
+            - { name: 'delete', label: 'Delete', icon: 'times' }
+
+# -- Setings All Entities
+    entities:
+        Categories:
+            class: QuizBundle\Entity\Categories
+            label: 'Categories'
+            list:
+                title: '%%entity_label%% listing'
+                fields:
+                    - id
+                    - { property: 'isPublished', label: 'Status', type: 'toggle', type_label: 'Actif' }
+                    - nom
+                    - { property: 'img', type: 'image', base_path: '/img/' }
+                    - theme
+
+            # -- Settings for new Actions
+            new:
+                fields:
+                    - { property: 'isPublished', label: 'Published category', type: 'checkbox' }
+
+            form:
+                title: 'Add a new Category'
+                actions:
+                    list: { name: 'list', label: '%%entity_label%% listing' }
+                fields:
+                    - nom
+                    - { property: 'imgFile', type: 'file', label: 'Image' }
+
+# ----- Setings Themes Entity
+        Themes:
+            class: QuizBundle\Entity\Themes
+            label: 'Themes'
+            list:
+                title: '%%entity_label%% listing'
+                fields:
+                    - id
+                    - nom
+                    - { property: 'img', type: 'image', base_path: '/img/Affiche_theme/' }
+                    - category
+                    - question
+
+            form:
+                title: 'Add a new Theme'
+                actions:
+                    list: { name: 'list', label: '%%entity_label%% listing' }
+                fields:
+                    - nom
+                    - { property: 'imgFile', type: 'file', label: 'Image' }
+                    - { property: 'category', label: 'Category' }
+
+# ----- Setings Questions Entity
+        Questions:
+            class: QuizBundle\Entity\Questions
+            label: 'Questions'
+            list:
+                title: '%%entity_label%% listing'
+                fields:
+                    - id
+                    - questions
+                    - theme
+                    - reponse
+
+            form:
+                title: 'Add a new questions'
+                actions:
+                    list: { name: 'list', label: '%%entity_label%% listing' }
+                fields:
+                    - { property: 'questions' }
+                    - theme
+
+# ----- Setings Responses Entity
+        Reponses:
+            class: QuizBundle\Entity\Responses
+            label: 'Reponses'
+            list:
+                title: '%%entity_label%% listing'
+                fields:
+                    - id
+                    - nom
+                    - question
+                    - { property: 'status', type: 'toggle' }
+
+            # -- Settings for new Actions
+            new:
+                fields:
+                    - { property: 'status', label: 'Bonne reponse', type: 'checkbox' }
+
+            form:
+                title: 'Add a new reponses'
+                actions:
+                    list: { name: 'list', label: '%%entity_label%% listing' }
+                fields:
+                    - question
+                    - nom
+                    - status
+

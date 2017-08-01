@@ -37,7 +37,7 @@ class CategoriesController extends Controller
     }
 
     /**
-     * @Route("/add")
+     * @Route("/categories/add")
      */
     public function addAction()
     {

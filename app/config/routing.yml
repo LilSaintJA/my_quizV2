@@ -6,3 +6,8 @@ quiz:
 list_cat:
     path: /category/{id}
     defaults: { _controller: QuizBundle:Categories:list }
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /quiz_backend

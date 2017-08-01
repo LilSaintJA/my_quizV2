@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Index;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Themes
@@ -14,6 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     @Index(name="id_cat", columns={"id_cat"})
  * })
  * @ORM\Entity(repositoryClass="QuizBundle\Repository\ThemesRepository")
+ *
+ * @Vich\Uploadable
  */
 class Themes
 {
@@ -53,13 +57,25 @@ class Themes
     private $img;
 
     /**
+     * @var File
+     * @Vich\UploadableField(mapping="theme_images", fileNameProperty="img")
+     */
+    private $imgFile;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id_cat", type="integer")
      */
     private $id_cat;
 
+    /**
+     * @var \DateTime
+     * @ORM\Column(name="update_at", type="datetime")
+     */
+    private $updateAt;
 
+    public $photo;
  
     /**
      * Get id
@@ -162,6 +178,27 @@ class Themes
     {
         return $this->img;
     }
+
+    /**
+     * @param File|null $img
+     */
+    public function setImgFile(File $img = null)
+    {
+        $this->imgFile = $img;
+
+        if ($img) {
+            $this->updateAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getImgFile()
+    {
+        return $this->imgFile;
+    }
+
     /**
      * Constructor
      */
@@ -203,8 +240,43 @@ class Themes
         return $this->question;
     }
 
-//    public function __toString()
-//    {
-//        return $this->get;
-//    }
+    /**
+     * Converte object in string
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+
+    /**
+     * Set the image path for BackEnd
+     * @return string
+     */
+    public function getPhotoPath() {
+        return '/img/Affiche_theme/' . $this->getImg() . $this->photo;
+    }
+
+    /**
+     * Set updateAt
+     *
+     * @param \DateTime $updateAt
+     * @return Themes
+     */
+    public function setUpdateAt($updateAt)
+    {
+        $this->updateAt = $updateAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updateAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdateAt()
+    {
+        return $this->updateAt;
+    }
 }

@@ -3,11 +3,14 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@QuizBundle/Resources/config/services.yml" }
+    - { resource: admin.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    quiz.path.category_images: /img/
+    quiz.path.theme_images: /img/Affiche_theme/
 
 framework:
     #esi: ~
@@ -103,3 +106,14 @@ doctrine_migrations:
     namespace: Application\Migrations
     table_name: migration_versions
     name: Application Migrations
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        category_images:
+            uri_prefix: '%quiz.path.category_images%'
+            upload_destination: '%kernel.root_dir%/../web/img'
+
+        theme_images:
+            uri_prefix: '%quiz.path.theme_images%'
+            upload_destination: '%kernel.root_dir%/../web/img/Affiche_theme'

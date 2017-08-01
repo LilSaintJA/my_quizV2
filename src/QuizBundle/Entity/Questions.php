@@ -36,7 +36,7 @@ class Questions
     /**
      * @var string
      *
-     * @ORM\Column(name="questions", type="text")
+     * @ORM\Column(name="questions", type="string")
      */
     private $questions;
 
@@ -166,5 +166,10 @@ class Questions
     public function getReponse()
     {
         return $this->reponse;
+    }
+
+    public function __toString()
+    {
+        return $this->getQuestions();
     }
 }

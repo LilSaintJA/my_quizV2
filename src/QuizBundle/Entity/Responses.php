@@ -46,7 +46,7 @@ class Responses
     /**
      * @var int
      *
-     * @ORM\Column(name="status", type="integer")
+     * @ORM\Column(name="status", type="boolean", options={"default":false})
      */
     private $status;
 
@@ -151,5 +151,14 @@ class Responses
     public function getQuestion()
     {
         return $this->question;
+    }
+
+    /**
+     * Converte object in string
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getNom();
     }
 }
