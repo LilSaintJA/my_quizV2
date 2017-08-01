@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Index;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Themes
@@ -26,7 +28,6 @@ class Themes
     private $category;
 
     /**
-     * @var Questions $question
      * @ORM\OneToMany(targetEntity="Questions", mappedBy="theme")
      */
     private $question;
@@ -54,13 +55,25 @@ class Themes
     private $img;
 
     /**
+     * @var File
+     * @Vich\UploadableField(mapping="theme_images", fileNameProperty="img")
+     */
+    private $imgFile;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id_cat", type="integer")
      */
     private $id_cat;
 
+    /**
+     * @var \DateTime
+     * @ORM\Column(name="update_at", type="datetime")
+     */
+    private $updateAt;
 
+    public $photo;
  
     /**
      * Get id
@@ -204,8 +217,12 @@ class Themes
         return $this->question;
     }
 
-//    public function __toString()
-//    {
-//        return $this->get;
-//    }
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+
+    public function getPhotoPath() {
+        return '/img/Affiche_theme/' . $this->getImg() . $this->photo;
+    }
 }

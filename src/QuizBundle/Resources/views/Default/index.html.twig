@@ -4,18 +4,20 @@
     {#<h1>Categories list</h1>#}
     <div class="row">
         {% for category in categories %}
-            <div class="col-lg-4 col-sm-1">
-                <div class="container-category">
-                    <a href="{{ path('category_list', { 'id': category.id }) }}">
-                        <img class="img-category img-thumbnail img-fluid" src="{{asset(category.img, 'category') }}" alt="{{ category.img }}">
-                    </a>
-                    <p class="title-category">
-                        <a href="{{ path('category_list', { 'id': category.id }) }}" class="title-category-{{ category.id }}">
-                            Quiz {{ category.nom }}
+            {% if category.isPublished == 1 %}
+                <div class="col-lg-4 col-sm-1">
+                    <div class="container-category">
+                        <a href="{{ path('category_list', { 'id': category.id }) }}">
+                            <img class="img-category img-thumbnail img-fluid" src="{{asset(category.img, 'category') }}" alt="{{ category.img }}">
                         </a>
-                    </p>
+                        <p class="title-category">
+                            <a href="{{ path('category_list', { 'id': category.id }) }}" class="title-category-{{ category.id }}">
+                                Quiz {{ category.nom }}
+                            </a>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

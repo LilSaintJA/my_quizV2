@@ -129,4 +129,27 @@ class Responses
     {
         return $this->status;
     }
+
+    /**
+     * Set question
+     *
+     * @param \QuizBundle\Entity\Questions $question
+     * @return Responses
+     */
+    public function setQuestion(\QuizBundle\Entity\Questions $question = null)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return \QuizBundle\Entity\Questions 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
 }

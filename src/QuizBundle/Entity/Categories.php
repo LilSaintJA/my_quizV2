@@ -3,12 +3,15 @@
 namespace QuizBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Categories
  *
  * @ORM\Table(name="categories")
  * @ORM\Entity(repositoryClass="QuizBundle\Repository\CategoriesRepository")
+ * @Vich\Uploadable
  */
 class Categories
 {
@@ -41,6 +44,27 @@ class Categories
      * @ORM\Column(name="img", type="text")
      */
     private $img;
+
+    /**
+     * @Vich\UploadableField(mapping="category_images", fileNameProperty="img")
+     * @var File
+     */
+    private $imgFile;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="is_published", type="boolean", options={"default":true})
+     */
+    private $isPublished;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+    public $photo;
 
 
     /**
@@ -77,6 +101,26 @@ class Categories
     }
 
     /**
+     * @param File|null $img
+     */
+    public function setImgFile(File $img = null)
+    {
+        $this->imgFile = $img;
+
+        if ($img) {
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getImgFile()
+    {
+        return $this->imgFile;
+    }
+
+    /**
      * Set img
      *
      * @param string $img
@@ -98,6 +142,8 @@ class Categories
     {
         return $this->img;
     }
+
+
     /**
      * Constructor
      */
@@ -137,5 +183,70 @@ class Categories
     public function getTheme()
     {
         return $this->theme;
+    }
+
+    /**
+     * Converte Object in string
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getNom();
+    }
+
+    /**
+     * Set the image path for BackEnd
+     * @return string
+     */
+    public function getPathPhoto() {
+        return '/img/' . $this->getImg() . $this->photo;
+    }
+
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Categories
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+    
+
+    /**
+     * Set isPublished
+     *
+     * @param boolean $isPublished
+     * @return Categories
+     */
+    public function setIsPublished($isPublished)
+    {
+        $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * Get isPublished
+     *
+     * @return boolean 
+     */
+    public function getIsPublished()
+    {
+        return $this->isPublished;
     }
 }
