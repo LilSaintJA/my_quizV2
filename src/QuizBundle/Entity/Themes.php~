@@ -16,6 +16,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *     @Index(name="id_cat", columns={"id_cat"})
  * })
  * @ORM\Entity(repositoryClass="QuizBundle\Repository\ThemesRepository")
+ *
+ * @Vich\Uploadable
  */
 class Themes
 {
@@ -44,9 +46,9 @@ class Themes
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $nom;
+    private $name;
 
     /**
      * @var string
@@ -68,6 +70,13 @@ class Themes
     private $id_cat;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="is_published", type="boolean", options={"default":true})
+     */
+    private $isPublished;
+
+    /**
      * @var \DateTime
      * @ORM\Column(name="update_at", type="datetime")
      */
@@ -86,26 +95,26 @@ class Themes
     }
 
     /**
-     * Set nom
+     * Set name
      *
-     * @param string $nom
+     * @param string $name
      * @return Themes
      */
-    public function setNom($nom)
+    public function setName($name)
     {
-        $this->nom = $nom;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get name
      *
-     * @return string 
+     * @return string
      */
-    public function getNom()
+    public function getName()
     {
-        return $this->nom;
+        return $this->name;
     }
 
     /**
@@ -176,6 +185,27 @@ class Themes
     {
         return $this->img;
     }
+
+    /**
+     * @param File|null $img
+     */
+    public function setImgFile(File $img = null)
+    {
+        $this->imgFile = $img;
+
+        if ($img) {
+            $this->updateAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getImgFile()
+    {
+        return $this->imgFile;
+    }
+
     /**
      * Constructor
      */
@@ -217,12 +247,67 @@ class Themes
         return $this->question;
     }
 
+    /**
+     * Converte object in string
+     * @return string
+     */
     public function __toString()
     {
-        return $this->getNom();
+        return $this->getName();
     }
 
+    /**
+     * Set the image path for BackEnd
+     * @return string
+     */
     public function getPhotoPath() {
         return '/img/Affiche_theme/' . $this->getImg() . $this->photo;
+    }
+
+    /**
+     * Set updateAt
+     *
+     * @param \DateTime $updateAt
+     * @return Themes
+     */
+    public function setUpdateAt($updateAt)
+    {
+        $this->updateAt = $updateAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updateAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdateAt()
+    {
+        return $this->updateAt;
+    }
+
+
+    /**
+     * Set isPublished
+     *
+     * @param boolean $isPublished
+     * @return Themes
+     */
+    public function setIsPublished($isPublished)
+    {
+        $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * Get isPublished
+     *
+     * @return boolean 
+     */
+    public function getIsPublished()
+    {
+        return $this->isPublished;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace QuizBundle\Form;
 
-use QuizBundle\Entity\Responses;
+use QuizBundle\Entity\Answers;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,7 +28,7 @@ class ResponsesType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => Responses::class
+            'data_class' => Answers::class
         ));
     }
 

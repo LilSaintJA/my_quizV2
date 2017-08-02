@@ -3,7 +3,7 @@
 {% block list_category %}
     <div class="container">
         <div class="row">
-            <h1>Tous les quizz pour {{ category.nom }}</h1>
+            <h1>Tous les quizz pour {{ category.name }}</h1>
         </div>
         <div class="row">
             {% for themes in theme %}
@@ -14,7 +14,7 @@
                         </a>
                         <p class="title-themes">
                             <a href="{{ path('quiz', { 'id': themes.id }) }}" class="title-themes-{{ themes.id }}">
-                                Quiz {{ themes.nom }}
+                                Quiz {{ themes.name }}
                             </a>
                         </p>
                     </div>

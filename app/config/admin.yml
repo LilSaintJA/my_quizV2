@@ -12,7 +12,7 @@ easy_admin:
             - { label: 'Back Office' }
             - label: 'Quizz'
               children:
-                      [{ entity: Categories, label: 'Categories des Quizz', icon: 'circle-thin' },{ entity: Themes, label: 'Themes - Les Quizz', icon: 'circle-thin' },{ entity: Questions, label: 'Questions', icon: 'circle-thin' },{ entity: Reponses, label: 'Reponses', icon: 'circle-thin' }]
+                      [{ entity: Categories, label: 'Categories des Quizz', icon: 'circle-thin' },{ entity: Themes, label: 'Themes - Les Quizz', icon: 'circle-thin' },{ entity: Questions, label: 'Questions', icon: 'circle-thin' },{ entity: Answers, label: 'Answers', icon: 'circle-thin' }]
 
             - label: 'Users'
 
@@ -33,22 +33,22 @@ easy_admin:
                 title: '%%entity_label%% listing'
                 fields:
                     - id
-                    - { property: 'isPublished', label: 'Status', type: 'toggle', type_label: 'Actif' }
-                    - nom
+                    - { property: 'isPublished', label: 'Published', type: 'toggle', type_label: 'Actif' }
+                    - name
                     - { property: 'img', type: 'image', base_path: '/img/' }
                     - theme
 
             # -- Settings for new Actions
             new:
                 fields:
-                    - { property: 'isPublished', label: 'Published category', type: 'checkbox' }
+                    - { property: 'isPublished', label: 'Published', type: 'checkbox' }
 
             form:
                 title: 'Add a new Category'
                 actions:
                     list: { name: 'list', label: '%%entity_label%% listing' }
                 fields:
-                    - nom
+                    - name
                     - { property: 'imgFile', type: 'file', label: 'Image' }
 
 # ----- Setings Themes Entity
@@ -59,17 +59,22 @@ easy_admin:
                 title: '%%entity_label%% listing'
                 fields:
                     - id
-                    - nom
+                    - name
                     - { property: 'img', type: 'image', base_path: '/img/Affiche_theme/' }
                     - category
                     - question
+
+            # -- Settings for new Actions
+            new:
+                fields:
+                    - { property: 'isPublished', label: 'Published', type: 'checkbox' }
 
             form:
                 title: 'Add a new Theme'
                 actions:
                     list: { name: 'list', label: '%%entity_label%% listing' }
                 fields:
-                    - nom
+                    - name
                     - { property: 'imgFile', type: 'file', label: 'Image' }
                     - { property: 'category', label: 'Category' }
 
@@ -81,41 +86,41 @@ easy_admin:
                 title: '%%entity_label%% listing'
                 fields:
                     - id
-                    - questions
+                    - statement
                     - theme
-                    - reponse
+                    - answer
 
             form:
                 title: 'Add a new questions'
                 actions:
                     list: { name: 'list', label: '%%entity_label%% listing' }
                 fields:
-                    - { property: 'questions' }
+                    - statement
                     - theme
 
-# ----- Setings Responses Entity
-        Reponses:
-            class: QuizBundle\Entity\Responses
-            label: 'Reponses'
+# ----- Setings Answers Entity
+        Answers:
+            class: QuizBundle\Entity\Answers
+            label: 'Answers'
             list:
                 title: '%%entity_label%% listing'
                 fields:
                     - id
-                    - nom
+                    - statement
                     - question
                     - { property: 'status', type: 'toggle' }
 
             # -- Settings for new Actions
             new:
                 fields:
-                    - { property: 'status', label: 'Bonne reponse', type: 'checkbox' }
+                    - { property: 'status', label: 'Good answer', type: 'checkbox' }
 
             form:
-                title: 'Add a new reponses'
+                title: 'Add a new answer'
                 actions:
                     list: { name: 'list', label: '%%entity_label%% listing' }
                 fields:
                     - question
-                    - nom
+                    - statement
                     - status
 

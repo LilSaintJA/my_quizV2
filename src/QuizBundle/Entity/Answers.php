@@ -5,17 +5,17 @@ namespace QuizBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Responses
+ * Answers
  *
- * @ORM\Table(name="responses")
- * @ORM\Entity(repositoryClass="QuizBundle\Repository\ResponsesRepository")
+ * @ORM\Table(name="answers")
+ * @ORM\Entity(repositoryClass="QuizBundle\Repository\AnswersRepository")
  */
-class Responses
+class Answers
 {
 
     /**
      * @var Questions $question
-     * @ORM\ManyToOne(targetEntity="Questions", inversedBy="reponse")
+     * @ORM\ManyToOne(targetEntity="Questions", inversedBy="answer")
      * @ORM\JoinColumn(name="id_question", referencedColumnName="id")
      */
     private $question;
@@ -32,9 +32,9 @@ class Responses
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="statement", type="string", length=255)
      */
-    private $nom;
+    private $statement;
 
     /**
      * @var int
@@ -62,33 +62,33 @@ class Responses
     }
 
     /**
-     * Set nom
+     * Set statement
      *
-     * @param string $nom
-     * @return Responses
+     * @param string $statement
+     * @return Answers
      */
-    public function setNom($nom)
+    public function setStatement($statement)
     {
-        $this->nom = $nom;
+        $this->statement = $statement;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get statement
      *
-     * @return string 
+     * @return string
      */
-    public function getNom()
+    public function getStatement()
     {
-        return $this->nom;
+        return $this->statement;
     }
 
     /**
      * Set idQuestion
      *
      * @param integer $idQuestion
-     * @return Responses
+     * @return Answers
      */
     public function setIdQuestion($idQuestion)
     {
@@ -111,7 +111,7 @@ class Responses
      * Set status
      *
      * @param integer $status
-     * @return Responses
+     * @return Answers
      */
     public function setStatus($status)
     {
@@ -134,7 +134,7 @@ class Responses
      * Set question
      *
      * @param \QuizBundle\Entity\Questions $question
-     * @return Responses
+     * @return Answers
      */
     public function setQuestion(\QuizBundle\Entity\Questions $question = null)
     {
@@ -159,6 +159,7 @@ class Responses
      */
     public function __toString()
     {
-        return $this->getNom();
+        return $this->getStatement();
     }
+
 }
