@@ -46,9 +46,9 @@ class Themes
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $nom;
+    private $name;
 
     /**
      * @var string
@@ -70,6 +70,13 @@ class Themes
     private $id_cat;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="is_published", type="boolean", options={"default":true})
+     */
+    private $isPublished;
+
+    /**
      * @var \DateTime
      * @ORM\Column(name="update_at", type="datetime")
      */
@@ -88,26 +95,26 @@ class Themes
     }
 
     /**
-     * Set nom
+     * Set name
      *
-     * @param string $nom
+     * @param string $name
      * @return Themes
      */
-    public function setNom($nom)
+    public function setName($name)
     {
-        $this->nom = $nom;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get name
      *
-     * @return string 
+     * @return string
      */
-    public function getNom()
+    public function getName()
     {
-        return $this->nom;
+        return $this->name;
     }
 
     /**
@@ -246,7 +253,7 @@ class Themes
      */
     public function __toString()
     {
-        return $this->getNom();
+        return $this->getName();
     }
 
     /**
@@ -278,5 +285,29 @@ class Themes
     public function getUpdateAt()
     {
         return $this->updateAt;
+    }
+
+
+    /**
+     * Set isPublished
+     *
+     * @param boolean $isPublished
+     * @return Themes
+     */
+    public function setIsPublished($isPublished)
+    {
+        $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * Get isPublished
+     *
+     * @return boolean 
+     */
+    public function getIsPublished()
+    {
+        return $this->isPublished;
     }
 }

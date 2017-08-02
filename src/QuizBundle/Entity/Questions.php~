@@ -19,10 +19,10 @@ class Questions
     private $theme;
 
     /**
-     * @var Responses $reponse
-     * @ORM\OneToMany(targetEntity="Responses", mappedBy="question")
+     * @var Answers $answer
+     * @ORM\OneToMany(targetEntity="Answers", mappedBy="question")
      */
-    private $reponse;
+    private $answer;
 
     /**
      * @var int
@@ -36,9 +36,9 @@ class Questions
     /**
      * @var string
      *
-     * @ORM\Column(name="questions", type="text")
+     * @ORM\Column(name="statement", type="string")
      */
-    private $questions;
+    private $statement;
 
     /**
      * @var int
@@ -59,26 +59,26 @@ class Questions
     }
 
     /**
-     * Set questions
+     * Set statement
      *
-     * @param string $questions
+     * @param string $statement
      * @return Questions
      */
-    public function setQuestions($questions)
+    public function setStatement($statement)
     {
-        $this->questions = $questions;
+        $this->statement = $statement;
 
         return $this;
     }
 
     /**
-     * Get questions
+     * Get statement
      *
-     * @return string 
+     * @return string
      */
-    public function getQuestions()
+    public function getStatement()
     {
-        return $this->questions;
+        return $this->statement;
     }
 
     /**
@@ -132,44 +132,46 @@ class Questions
      */
     public function __construct()
     {
-        $this->reponse = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->answer = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
     /**
-     * Add reponse
+     * Add answer
      *
-     * @param \QuizBundle\Entity\Responses $reponse
+     * @param \QuizBundle\Entity\Answers $answer
      * @return Questions
      */
-    public function addReponse(\QuizBundle\Entity\Responses $reponse)
+    public function addAnswer(\QuizBundle\Entity\Answers $answer)
     {
-        $this->reponse[] = $reponse;
+        $this->answer[] = $answer;
 
         return $this;
     }
 
     /**
-     * Remove reponse
+     * Remove answer
      *
-     * @param \QuizBundle\Entity\Responses $reponse
+     * @param \QuizBundle\Entity\Answers $answer
      */
-    public function removeReponse(\QuizBundle\Entity\Responses $reponse)
+    public function removeAnswer(\QuizBundle\Entity\Answers $answer)
     {
-        $this->reponse->removeElement($reponse);
+        $this->answer->removeElement($answer);
     }
 
     /**
-     * Get reponse
+     * Get answer
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function getReponse()
+    public function getAnswer()
     {
-        return $this->reponse;
+        return $this->answer;
     }
 
     public function __toString()
     {
-        return $this->getQuestions();
+        return $this->getQuestion();
     }
+
 }

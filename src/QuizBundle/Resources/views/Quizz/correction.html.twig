@@ -1,15 +1,15 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}{{ quiz.nom }}{% endblock %}
+{% block title %}{{ quiz.name }}{% endblock %}
 
 {% block body %}
     <header class="header header-questions quiz-{{ quiz.id }} z-depth-1"></header>
     <div class="container">
-        <h1 class="title-category-{{ quiz.id }} title-quizz">{{ quiz.nom }}</h1>
+        <h1 class="title-category-{{ quiz.id }} title-quizz">{{ quiz.name }}</h1>
         <div class="row">
             {% if reponseUser %}
                 <div class="col l4">
-                    <p>Bravo vous avez compléte le quiz : <strong class="title-category-{{ quiz.id }}">{{ quiz.nom }}</strong></p>
+                    <p>Bravo vous avez compléte le quiz : <strong class="title-category-{{ quiz.id }}">{{ quiz.name }}</strong></p>
                 </div>
             {% endif %}
         </div>
@@ -17,18 +17,18 @@
         {% for q in ask %}
             {% set i = i + 1 %}
             <div class="row row-quiz">
-                <p>{{ i }} - {{ q.questions }}</p>
+                <p>{{ i }} - {{ q.statement }}</p>
             </div>
-            {% for reponse in q.reponse %}
-                <p class="other-reponse">{{ reponse.nom }} {{ reponse.status }}</p>
+            {% for reponse in q.answer %}
+                <p class="other-reponse">{{ reponse.statement }} {{ reponse.status }}</p>
                 {% for r in reponseUser %}
                     <div class="container-reponse">
                         {% if r == reponse.id %}
                             {% if reponse.status == 0 %}
-                                <p class="user-reponse bad-answer">{{ reponse.nom }}</p>
+                                <p class="user-reponse bad-answer">{{ reponse.statement }}</p>
                                 <div class="container-reponse-img bad-reponse"></div>
                             {% else %}
-                                <p class="user-reponse good-answer">{{ reponse.nom }}</p>
+                                <p class="user-reponse good-answer">{{ reponse.statement }}</p>
                                 <div class="container-reponse-img good-reponse"></div>
                             {% endif %} {# End if reponse.status #}
                         {% endif %} {# End if reponse.id #}

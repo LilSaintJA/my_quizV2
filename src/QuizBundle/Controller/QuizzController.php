@@ -2,7 +2,7 @@
 
 namespace QuizBundle\Controller;
 
-use QuizBundle\Entity\Responses;
+use QuizBundle\Entity\Answers;
 use QuizBundle\Entity\Themes;
 use QuizBundle\Form\ResponsesType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -25,7 +25,7 @@ class QuizzController extends Controller
 
         $ask = $quiz->getQuestion();
 
-        $reponses = new Responses();
+        $reponses = new Answers();
         $form = $this->createForm(ResponsesType::class, $reponses);
 
         if ($request->isMethod('POST')) {
