@@ -1,0 +1,19 @@
+{% block form_row %}
+    {% spaceless %}
+        <div class="col-lg-12 col-sm-12">
+            {% if 'checkbox' in block_prefixes %}
+                <div class="form-check">
+                    {{ form_widget(form, { 'attr': {'class': 'input-quiz'} }) }}
+                    {{ form_label(form, null, { 'label_attr': {'class': 'label-quiz-radioBtn'} }) }}
+                    <div class="check check"></div>
+                </div>
+            {% else %}
+                <div class="md-form form-group">
+                    {{ form_label(form, null, { 'label_attr': {'class': 'label-quiz'} }) }}
+                    {{ form_errors(form) }}
+                    {{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            {% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock %}

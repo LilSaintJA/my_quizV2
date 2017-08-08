@@ -45,12 +45,20 @@
     margin-bottom: 3rem;
 }
 
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
     position: absolute;
     visibility: hidden;
 }
 
 .label-quiz {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #292B2C;
+    cursor: pointer;
+}
+
+.label-quiz-radioBtn {
     display: block;
     position: relative;
     color: #647786;

@@ -2,6 +2,10 @@
 
 namespace QuizBundle\Controller;
 
+use QuizBundle\Entity\Questions;
+use QuizBundle\Entity\Themes;
+use QuizBundle\Form\QuestionsType;
+use QuizBundle\Form\ThemesType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -20,7 +24,6 @@ class ThemesController extends Controller
 
     /**
      * @Route("/themes/{id}", name="theme_list")
-     * @Method({"GET"})
      */
     public function listAction($id)
     {
@@ -36,12 +39,14 @@ class ThemesController extends Controller
     }
 
     /**
-     * @Route("/add")
+     * @Route("/themes/add/", name="theme_add")
      */
     public function addAction()
     {
-        return $this->render('QuizBundle:Themes:add.html.twig', array(
-            // ...
+        $theme = new Themes();
+        $form = $this->createForm(ThemesType::class, $theme);
+        return $this->render('QuizBundle:Themes:addQuestion.html.twig', array(
+            'form' => $form->createView(),
         ));
     }
 

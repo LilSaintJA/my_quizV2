@@ -186,15 +186,6 @@ class Categories
     }
 
     /**
-     * Converte Object in string
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->getName();
-    }
-
-    /**
      * Set the image path for BackEnd
      * @return string
      */
@@ -248,5 +239,14 @@ class Categories
     public function getIsPublished()
     {
         return $this->isPublished;
+    }
+
+    /**
+     * Converte Object in string
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
     }
 }

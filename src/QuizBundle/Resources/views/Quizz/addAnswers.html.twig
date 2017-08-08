@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}QuizBundle:Quizz:add{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="col-sm-12 col-lg-6">
+            <div class="row">
+                <div class="description-addQuiz">
+                    <p>Ajoute les réponses pour la question </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            {#<div class="row">#}
+                {#<h1>Ajoute les réponses</h1>#}
+            {#</div>#}
+            <div class="row row-quiz">
+                {{ form_start(form, { 'attr': {'class': 'col-lg-8 col-sm-12'} }) }}
+                {% form_theme form 'form/fields.html.twig' %}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
