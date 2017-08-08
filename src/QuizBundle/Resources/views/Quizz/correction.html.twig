@@ -9,7 +9,8 @@
         <div class="row">
             {% if reponseUser %}
                 <div class="col l4">
-                    <p>Bravo vous avez compléte le quiz : <strong class="title-category-{{ quiz.id }}">{{ quiz.name }}</strong></p>
+                    <p>Bravo vous avez compléter le quiz : <strong class="title-category-{{ quiz.id }}">{{ quiz.name }}</strong></p>
+                    <p>Votre score est de <span class="user-reponse good-answer">{{ reponseUser|length }} bonne réponse</span> sur {{ ask|length }}</p>
                 </div>
             {% endif %}
         </div>

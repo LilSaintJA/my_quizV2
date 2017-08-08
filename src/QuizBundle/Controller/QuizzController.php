@@ -3,8 +3,10 @@
 namespace QuizBundle\Controller;
 
 use QuizBundle\Entity\Answers;
+use QuizBundle\Entity\Questions;
 use QuizBundle\Entity\Themes;
-use QuizBundle\Form\ResponsesType;
+use QuizBundle\Form\QuestionsType;
+use QuizBundle\Form\AnswersType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -26,7 +28,7 @@ class QuizzController extends Controller
         $ask = $quiz->getQuestion();
 
         $reponses = new Answers();
-        $form = $this->createForm(ResponsesType::class, $reponses);
+        $form = $this->createForm(AnswersType::class, $reponses);
 
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
@@ -86,12 +88,26 @@ class QuizzController extends Controller
     }
 
     /**
-     * @Route("/add")
+     * @Route("/quiz/addQuestion/", name="add_question")
      */
-    public function addAction()
+    public function addQuestionAction()
     {
-        return $this->render('QuizBundle:Quizz:add.html.twig', array(
-            // ...
+        $question = new Questions();
+        $form= $this->createForm(QuestionsType::class, $question);
+        return $this->render('QuizBundle:Quizz:addQuestion.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * @Route("/quiz/addAnswers/", name="add_answers")
+     */
+    public function addAnswersAction()
+    {
+        $answers = new Answers();
+        $form = $this->createForm(AnswersType::class, $answers);
+        return $this->render('QuizBundle:Quizz:addAnswers.html.twig', array(
+            'form' => $form->createView(),
         ));
     }
 

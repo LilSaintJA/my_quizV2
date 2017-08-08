@@ -1,0 +1,19 @@
+{% block answers_row %}
+    {% spaceless %}
+        {#{% set i = 3 %}#}
+            <div class="form-check">
+                {{ form_widget(form, { 'attr': {'class': 'input-quiz'} }) }}
+                {{ form_label(form, null, { 'label_attr': {'class': 'label-quiz-radioBtn'} }) }}
+                <div class="check check"></div>
+            </div><div class="form-check">
+                {{ form_widget(form, { 'attr': {'class': 'input-quiz'} }) }}
+                {{ form_label(form, null, { 'label_attr': {'class': 'label-quiz-radioBtn'} }) }}
+                <div class="check check"></div>
+            </div><div class="form-check">
+                {{ form_widget(form, { 'attr': {'class': 'input-quiz'} }) }}
+                {{ form_label(form, null, { 'label_attr': {'class': 'label-quiz-radioBtn'} }) }}
+                <div class="check check"></div>
+            </div>
+        {#{% endfor %}#}
+    {% endspaceless %}
+{% endblock %}

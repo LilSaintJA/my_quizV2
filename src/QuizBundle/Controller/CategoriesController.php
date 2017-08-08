@@ -41,7 +41,7 @@ class CategoriesController extends Controller
      */
     public function addAction()
     {
-        return $this->render('QuizBundle:Categories:add.html.twig', array(
+        return $this->render('QuizBundle:Categories:addQuestion.html.twig', array(
             // ...
         ));
     }
