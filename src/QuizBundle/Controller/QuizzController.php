@@ -7,6 +7,7 @@ use QuizBundle\Entity\Questions;
 use QuizBundle\Entity\Themes;
 use QuizBundle\Form\QuestionsType;
 use QuizBundle\Form\AnswersType;
+use QuizBundle\Form\QuizType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -28,7 +29,7 @@ class QuizzController extends Controller
         $ask = $quiz->getQuestion();
 
         $reponses = new Answers();
-        $form = $this->createForm(AnswersType::class, $reponses);
+        $form = $this->createForm(QuizType::class, $reponses);
 
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);

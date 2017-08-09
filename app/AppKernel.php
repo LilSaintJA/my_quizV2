@@ -18,8 +18,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new \Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new \abdielcs\ExpandedCollectionBundle\ExpandedCollectionBundle(),
+
             new \JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new \Vich\UploaderBundle\VichUploaderBundle(),
+            new \FOS\UserBundle\FOSUserBundle(),
+            new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
             new QuizBundle\QuizBundle(),
         );

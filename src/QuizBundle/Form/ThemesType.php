@@ -31,14 +31,18 @@ class ThemesType extends AbstractType
                         ->orderBy('c.name');
                 }
             ))
-            ->add('SaveAndAddAsk', SubmitType::class, array(
-                'label' => 'Ajouter les questions',
-                'attr' => array('class' => 'btn btn-quiz')
-            ))
-            ->add('saveAndAddTheme', SubmitType::class, array(
-                'label' => 'Ajouter un autre théme',
-                'attr' => array('class' => 'btn btn-quiz')
+            ->add('Save', SubmitType::class, array(
+                'label' => 'Envoyer',
+                'attr' => 'btn btn-quiz'
             ));
+//            ->add('SaveAndAddAsk', SubmitType::class, array(
+//                'label' => 'Ajouter les questions',
+//                'attr' => array('class' => 'btn btn-quiz')
+//            ))
+//            ->add('saveAndAddTheme', SubmitType::class, array(
+//                'label' => 'Ajouter un autre théme',
+//                'attr' => array('class' => 'btn btn-quiz')
+//            ));
 
     }
 

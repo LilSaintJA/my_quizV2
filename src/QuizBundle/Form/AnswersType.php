@@ -21,12 +21,10 @@ class AnswersType extends AbstractType
                 'required' => true,
                 'label' => 'Réponse'
             ))
-//            ->add('idQuestion')
             ->add('status', CheckboxType::class, array(
                 'required' => false,
                 'label' => 'Bonne réponse'
             ))
-//            ->add('question')
             ->add('SaveAndAdd', SubmitType::class, array(
                 'label' => 'Ajouter une autre réponse',
                 'attr' => array('class' => 'btn btn-quiz')
